@@ -1,0 +1,296 @@
+#include <stdio.h>
+
+int main() {
+    while(1){
+        int cont;
+    int n;
+    int rows, cols;
+
+    printf("\n--------------------------------------------------\n");
+    printf("========================PATTERNS====================\n");
+    printf("\nSTART PATTERN\n");
+    printf("1. Solid Square\n");
+    printf("2. Solid Rectangle \n");
+    printf("3. Left-Aligned Half Pyramid\n");
+    printf("4. Inverted Half Pyramid\n");
+    printf("5. Right-Aligned Half Pyramid\n");
+    printf("6. Full Pyramid\n");
+    printf("7. Inverted Full Pyramid\n");
+    printf("8. Diamond Pattern\n");
+    printf("\n NUMBERICAL PATTERN\n");
+    printf("9. Increasing Number Triangle\n");
+    printf("10. Repeated Number Pattern \n");
+    printf("11. Right-Aligned Number Triangle\n");
+    printf("12. Inverted Number Triangle\n");
+    printf("13. Number Pyramid\n");
+    printf("\n ALPHABETICAL PATTERN\n");
+    printf("14. Increasing Alphabet Triangle\n");
+    printf("15. Repeated Alphabet Pattern \n");
+    printf("16. Right-Aligned Alphabet Triangle\n");
+    printf("17. Inverted Alphabet Triangle\n");
+    printf("18. Alphabet Pyramid\n");
+    printf("\n--------------------------------------------------\n");
+    printf("\nEnter Your choice:- ");
+    scanf("%d", &n);
+
+    if (n == 1) 
+    {
+        printf("Enter the number of rows: ");
+        scanf("%d", &rows);
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= rows; j++) {
+                printf("*");
+            }
+            printf("\n");
+        }
+    }
+    else if (n == 2) 
+    {
+        printf("Enter number of rows: ");
+        scanf("%d", &rows);
+        printf("Enter number of columns: ");
+        scanf("%d", &cols);
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= cols; j++) {
+                printf("*");
+            }
+            printf("\n");
+        }
+    }
+    else if (n == 3) {
+    
+        printf("Enter number of rows: ");
+        scanf("%d", &n);
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                printf("*");
+            }
+            printf("\n");
+        }
+    }
+    else if (n == 4) 
+    {
+
+        printf("Enter number of rows: ");
+        scanf("%d", &n);
+        for (int i = n; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                printf("*");
+            }
+            printf("\n");
+        }
+    }
+    else if (n == 5) 
+    {
+        printf("Enter number of rows: ");
+        scanf("%d", &n);
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n-i; j++) {
+                printf(" ");
+            }
+        for(int k = 1; k <= i; k++) 
+        {
+            printf("*");
+    }
+    printf("\n");
+        }
+    }
+    else if (n==6)
+    {
+    printf("Enter the number of rows: ");
+    scanf("%d",&n);
+    for(int i=1; i<=n;i++){
+        for(int s=1;s<=n-i;s++){
+        printf(" ");
+    }
+    for(int j=1;j<=(2*i-1);j++){
+        printf("*");
+    }
+        printf("\n");
+    }
+    }
+    else if (n==7)
+    {
+    printf("Enter the number of rows: ");
+    scanf("%d",&n);
+    for(int i=n; i>=1;i--){
+        for(int s=1;s<=n-i;s++){
+        printf(" ");
+    }
+    for(int j=1;j<=(2*i-1);j++){
+        printf("*");
+    }
+        printf("\n");
+    }
+    }
+    else if (n==8)
+    {
+    printf("Enter the number of rows: ");
+    scanf("%d",&n);
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n - i; j++) {
+            printf(" ");
+        }
+        for (int k = 1; k <= (2 * i - 1); k++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    for (int i = n - 1; i >= 1; i--) {
+        for (int j = 1; j <= n - i; j++) {
+            printf(" ");
+        }
+        for (int k = 1; k <= (2 * i - 1); k++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+else if(n==9)
+{
+    printf("enter the number:- ");
+    scanf("%d",&n);
+    for(int i=1; i<=n;i++)
+    {
+        for(int j=1;j<=i;j++)
+        {
+            printf("%d",j);
+        }
+        printf("\n");
+    }
+}
+else if(n==10)
+{
+    printf("enter the number:- ");
+    scanf("%d",&n);
+    for(int i=1; i<=n;i++)
+    {
+        for(int j=1;j<=i;j++)
+        {
+            printf("%d",i);
+        }
+        printf("\n");
+    }
+}
+else if(n==11)
+{
+    printf("enter the number:- ");
+    scanf("%d",&n);
+    for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n-i; j++) {
+                printf(" ");
+            }
+        for(int k = 1; k <= i; k++) {
+            printf("%d",k);
+        }
+        {
+        printf("\n");
+    }
+}
+}
+else if(n==12)
+{
+    printf("enter the number:- ");
+    scanf("%d",&n);
+    for (int i = n; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) 
+                
+            printf("%d",j);
+        printf("\n");
+    }
+}
+else if( n==13){
+    printf("Enter the number:- ");
+    scanf("%d",&n);
+    for(int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n - i; j++) {
+            printf(" ");
+        }
+        for (int k = 1; k <= i; k++)
+            printf("%d ",k);
+        printf("\n");
+    }
+}
+else if( n==14){
+    printf("Enter the Letter:- ");
+    scanf("%d",&rows);
+    for(int i = 1; i <= rows; i++) {
+        char ch = 'A';
+        for(int j = 1; j <= i; j++) {
+            printf("%c ", ch);
+            ch++;
+        }
+        printf("\n");
+    }
+    
+}
+else if(n==15)
+{
+    printf("enter the number of rows:- ");
+    scanf("%d",&rows);
+    for(int i=1; i<=rows;i++)
+    {
+        char ch= 'A'+i-1;
+        for(int j=1;j<=i;j++)
+        {
+            printf("%c",ch);
+            ch++;
+        }
+        printf("\n");
+    }
+}
+else if(n==16)
+{
+    printf("enter the number of rows:- ");
+    scanf("%d",&rows);
+    for(int i = 1; i <= rows; i++) {
+        for( int s = 1; s <= rows - i; s++) {
+            printf("  "); 
+        }
+        char ch = 'A';
+        for(int j = 1; j <= i; j++) {
+            printf("%c ", ch);
+            ch++;
+        }
+
+        printf("\n");
+    }
+}
+else if(n==17)
+{
+    printf("enter the number:- ");
+    scanf("%d",&n);
+    for (int i = n; i >= 1; i--) {
+        char ch= 'A';
+            for (int j = 1; j <= i; j++) {
+            printf("%c",ch);
+            ch++;}
+        printf("\n");
+    }
+}
+else if( n==18){
+    printf("Enter the number:- ");
+    scanf("%d",&rows);
+    for(int i = 1; i <= rows; i++) {
+        for (int j = 1; j <= rows - i; j++) {
+            printf(" ");
+        }
+        char ch='A';
+        for (int k = 1; k <= i; k++){
+            printf("%c ",ch);
+            ch++;
+        }
+        printf("\n");
+    }
+}
+    else {
+        printf("Invalid choice!\n");
+    }
+    printf("\nDo you want to continue? (1 for Yes / 0 for No): ");
+        scanf("%d", &cont);
+        if (cont == 0) break;
+    }
+
+    return 0;
+}
+
